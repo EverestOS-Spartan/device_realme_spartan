@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_spartan.mk
+    $(LOCAL_DIR)/afterlife_spartan.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_spartan-user \
-    aosp_spartan-userdebug \
-    aosp_spartan-eng
+    afterlife_spartan-user \
+    afterlife_spartan-userdebug \
+    afterlife_spartan-eng
