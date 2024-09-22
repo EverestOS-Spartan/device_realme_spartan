@@ -11,20 +11,24 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from spartan device
 $(call inherit-product, device/realme/spartan/device.mk)
 
-# Inherit some common PixelOS stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common GenesisOS stuff.
+$(call inherit-product, vendor/genesis/config/common_full_phone.mk)
 
-# Device Specific Flags
-TARGET_INCLUDE_WIFI_EXT := true
+# Boot Animation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
 
-# Extras
+# GenesisOS stuff
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_HAS_UDFPS := true
+WITH_GAPPS := true
+TARGET_GAPPS_ARCH := arm64
+TARGET_INCLUDE_CARRIER_SETTINGS := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := true
-TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+TARGET_SUPPORTS_QUICK_TAP := true
+USE_PIXEL_CHARGER := true
 
-PRODUCT_NAME := aosp_spartan
+PRODUCT_NAME := genesis_spartan
 PRODUCT_DEVICE := spartan
 PRODUCT_MANUFACTURER := realme
 PRODUCT_BRAND := realme
@@ -32,9 +36,6 @@ PRODUCT_MODEL := RMX3371
 
 PRODUCT_SYSTEM_NAME := RMX3371
 PRODUCT_SYSTEM_DEVICE := RE54E4L1
-
-# Boot Animation Resolution
-TARGET_BOOT_ANIMATION_RES := 1080
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
